@@ -4,7 +4,6 @@ import axios from "axios";
 import ItemList from "../../components/ItemList/ItemList";
 
 const HomePage = () => {
-  const [taskList, setTaskList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [highPriority, setHighPriority] = useState([]);
@@ -17,7 +16,7 @@ const HomePage = () => {
       .get(SERVER_URL + "/item")
       .then((response) => {
         const listData = response.data;
-        setTaskList(listData);
+
         const newHighPriority = listData.filter(
           (el) => el.priority.toLowerCase() === "high"
         );
