@@ -59,7 +59,6 @@ const Form = () => {
         onChange={handleChangeTitle}
       />
       <p className="form__smile" onClick={handleChangeFun}>
-        {" "}
         {isFun ? "🙂" : "😐"}
       </p></div>
       <div className="form__row">

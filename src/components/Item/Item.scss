@@ -5,6 +5,9 @@
     flex-direction: column;
     border-radius: 4px; 
     
+    &--hidden{
+        display: none;
+    }
 
     &--Low{
         color:#46cdcf;
@@ -42,6 +45,7 @@
     }
 
     &__check{
+        cursor: pointer;
         width:20px;
     }
     
