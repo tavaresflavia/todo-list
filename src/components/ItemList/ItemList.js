@@ -8,7 +8,7 @@ const ItemList = ({listTitle,tasks}) => {
       <h3 className="list__title"> {listTitle} </h3>
 
       {tasks.map((item) => (
-        <Item title={item.title} dueDate={item.dueDate} priority= {item.priority} />
+        <Item isEmpty = {tasks.lenght===0 && true} title={item.title} dueDate={item.dueDate} priority= {item.priority} />
       ))}
     </div>
   );

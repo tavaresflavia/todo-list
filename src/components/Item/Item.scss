@@ -1,10 +1,48 @@
-// .item{
-
-//     &__title{
-
-//     }
-//     &__due-date{
-
-//     }
+.item{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px; 
     
-// }
+
+    &--Low{
+        color:#46cdcf;
+       background-color:  #46cdcf4a;
+
+    }
+
+    &--Medium{
+        color:#cfbf46;
+       background-color:  #cfbf464a;
+
+    }
+
+    &--High{
+        color:#cf464a;
+       background-color:  #cf464a4a;
+
+    }
+    
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+
+    &__title{
+        margin: 0 0 1rem;
+
+    }
+    &__due-date{
+        margin: 0;
+
+    }
+
+    &__check{
+        width:20px;
+    }
+    
+}
