@@ -6,17 +6,19 @@ import plusIcon from "../../assets/icons/plus1.png"
 const Header = () => {
     return (
         <header className="app-header">
-            <img 
-                src={logo} 
-                alt="logo for Taskfusion" 
-                className="main-logo"
-            />
+            <Link>            
+                <img 
+                    src={logo} 
+                    alt="logo for Taskfusion" 
+                    className="main-logo"
+                />
+            </Link>
 
             <nav className='nav'>
                 <ul className='nav__list'>
                     <li className='nav__list-item'>
                         <Link
-                            to="/prioritylist"
+                            to="/daily"
                             className='nav__link'
                         >
                         Daily
