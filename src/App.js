@@ -10,9 +10,10 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<PriorityPage />} />
         <Route path="/form" element={<FormPage />} />
-        <Route path="/prioritylist" element={<PriorityPage />} />
+        <Route path="/prioritylist" element={<HomePage />} />
+        <Route path="/daily" element={<PriorityPage />}/>
       </Routes>
     </BrowserRouter>
   );
