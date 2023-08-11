@@ -1,8 +1,9 @@
 .form {
   width: 100%;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
+  gap: 0.3rem;
 
   &__title {
     width: 300px;
@@ -10,85 +11,113 @@
     border: 2px solid rgb(191, 183, 183);
     border-radius: 4px;
     outline: none;
-    
     vertical-align: bottom;
   }
-  &__row{
+
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__date-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 50%;
+  }
+
+  &__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+  &__row2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
   &__due-date {
     height: 1.8rem;
-    margin: 1rem 0;
-    width: 50%;
+    width: 100%;
     border: 2px solid rgb(191, 183, 183);
     border-radius: 4px;
+    padding-left: 0.5rem;
   }
+
   &__smile {
     font-size: 1.75rem;
     cursor: pointer;
     margin-left: 1rem;
     display: inline-block;
     vertical-align: middle;
+    transform: translateY(10px);
   }
 
-  &__range{
-    accent-color:  rgb(191, 183, 183); 
-    margin: 1rem ;
+  &__range {
+    accent-color: rgb(191, 183, 183);
+    margin: 0.5rem;
     width: 4.5rem;
   }
 
-  &__priority{
-   
-    height: 1.8rem;
+  &__priority-div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__priority-label {
+    margin-left: .5rem;
+  }
+
+  &__priority {
+    width: 70px;
     border-radius: 4px;
     padding: 0.2rem;
-    
+    text-align: center;
+    margin: 0.5rem;
 
-    &--Low{
-        color:#46cdcf;
-        border: 2px solid #46cdcf;
-
+    &--Low {
+      color: #46cdcf;
+      border: 2px solid #46cdcf;
     }
 
-    &--Medium{
-        color:#cfbf46;
-        border: 2px solid #cfbf46;
-
+    &--Medium {
+      color: #cfbf46;
+      border: 2px solid #cfbf46;
     }
 
-    &--High{
-        color:#cf464a;
-        border: 2px solid #cf464a;
-
+    &--High {
+      color: #cf464a;
+      border: 2px solid #cf464a;
     }
-    
   }
-  
-  
 
-  &__btns{
+  &__priority-select {
+    display: flex;
+  }
+
+  &__btns {
     align-self: flex-end;
     display: flex;
     align-items: center;
-
+    gap: 0.5rem;
+    margin: 0.7rem 5px 0 0;
   }
 
   &__cancel {
     color: #cf464a;
     text-decoration: none;
     vertical-align: middle;
-    margin:0 1rem;
-    &:hover{
-
-        border-bottom: 2px solid  #cf464a ;
+    margin: 0 1rem;
+    &:hover {
+      border-bottom: 2px solid #cf464a;
     }
   }
 
   &__submit {
     width: 2rem;
   }
-
-  
 }
