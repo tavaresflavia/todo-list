@@ -10,9 +10,7 @@ const Item = ({title,dueDate,priority,id, isFun }) => {
 
 const [hidden,setHidden] = useState(false)
 
-    const handleCheck = () => {
-        
-
+    const handleCheck = (e) => {
         axios.delete(`${SERVER_URL}/item/${id}`)
         .then(() => setHidden(true)
         )

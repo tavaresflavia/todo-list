@@ -20,8 +20,6 @@ const PriorityPage = () => {
     if (month < 10) {month = `0${month}`;}
     if (day < 10) {day = `0${day}`;}
 
-    console.log(days);
-
     datesArray.push(`${year}-${month}-${day}`);
     }   
   
@@ -64,7 +62,7 @@ const PriorityPage = () => {
       <div>
         {
             days.map((day, i)=> {
-                return (<ItemList tasks={day} listTitle={datesArray[i]}/>)
+                return (<ItemList key={i} tasks={day} listTitle={datesArray[i]}/>)
             })
         }
       </div>
