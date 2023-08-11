@@ -62,7 +62,7 @@ const PriorityPage = () => {
       <div>
         {
             days.map((day, i)=> {
-                return (<ItemList key={i} tasks={day} listTitle={datesArray[i]}/>)
+                return (<ItemList tasks={day} listTitle={new Date(datesArray[i]).toDateString()}/>)
             })
         }
       </div>
