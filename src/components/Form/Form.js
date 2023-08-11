@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Form.scss";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import submitIcon from '../../assests/icons/submit.png'
 
 const Form = () => {
   const todayDate = new Date();
@@ -9,7 +11,7 @@ const Form = () => {
   const [dueDate, setDueDate] = useState(todayDate);
   const [priority,setPriority] = useState("2")
   const [isFun, setIsFun] = useState(false);
-  const priorityArr = ["low","medium","high"]
+  const priorityArr = ["Low","Medium","High"]
 
 
 
@@ -30,26 +32,39 @@ const Form = () => {
     setPriority(e.target.value);
   }
 
-  console.log(todayDate);
+  const handleSubmission = () => {
+    axios.post("http://localhost:3000/5050" + "/items", {
+      
+    })
+  }
+
+
   return (
     <div className="form">
-      <input
+      <div className="form__row"><input
         className="form__title"
         value={title}
         type="text"
         onChange={handleChangeTitle}
       />
-      <input className="form__due-date" type="date" value={dueDate} 
-      onChange = {handleChangeDueDate}/>
       <p className="form__smile" onClick={handleChangeFun}>
         {" "}
         {isFun ? "🙂" : "😐"}
-      </p>
+      </p></div>
+      <div className="form__row">
+      <input className="form__due-date" type="date" value={dueDate} 
+      onChange = {handleChangeDueDate}/>
+      
       <input className= "form__range"  value = {priority}  min = "1" max ="3" type= "range" 
       onChange= {handleChangePriority}/>
       <span className = {"form__priority form__priority--" + (priorityArr[priority-1]) }>{priorityArr[priority-1]} </span>
+      </div>
 
-      <Link className="form__btn"> </Link>
+      <div className = "form__btns">
+      <Link className="form__cancel" to = '/'> Cancel </Link>
+
+      <img src={submitIcon}className="form__submit" onClick= 
+      {handleSubmission} ></img></div>
     </div>
   );
 };
