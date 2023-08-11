@@ -10,12 +10,12 @@
 }
 
 .main-logo {
-    width: 80px;
+    width: 120px;
 }
 
 .nav {
     &__list {
-        list-style-type: none;
+        list-style-type: none;  
         display: flex;
         gap: 1rem;
         align-items: center;
@@ -37,11 +37,11 @@
     &__link {
         color: white;
         text-decoration: none;
-        font-size: 12px;
+        font-size: 18.72px;
     }
 }
 
 .plus-icon {
-    width: 16px;
-    height: 16px;
+    width: 19px;
+    height: 19px;
 }
