@@ -33,9 +33,13 @@ const Form = () => {
   }
 
   const handleSubmission = () => {
-    axios.post("http://localhost:3000/5050" + "/items", {
-      
-    })
+    axios.post("http://localhost:5050" + "/item", {
+    title: title,
+    priority: priority,
+    dueDate:dueDate,
+    isFun: isFun
+    }
+    )
   }
 
 
