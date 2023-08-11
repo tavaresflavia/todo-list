@@ -22,7 +22,7 @@ const ItemList = ({listTitle,tasks}) => {
       <p className = {"list__fun-stat " + (hasFun() ? "list__fun-stat--hidden":"")}> {hasFun() ? "":"Not your average calendar – sprinkle in some fun tasks!"} </p>
 
       {tasks.map((item) => (
-        <Item  id = {item.id} title={item.title} dueDate={item.dueDate} priority= {item.priority} isFun= {item.isFun} />
+        <Item key = {item.id} id = {item.id} title={item.title} dueDate={item.dueDate} priority= {item.priority} isFun= {item.isFun} />
       ))}
     </div>
   );
