@@ -30,7 +30,7 @@ const [hidden,setHidden] = useState(false)
                 
 
             <p className = "item__due-date"> {dueDate} </p>
-            <img onClick= {handleCheck}  className = "item__check" src={checkIcon}/>
+            <img onClick= {handleCheck}  className = "item__check" src={checkIcon} alt="item check"/>
             
             </div>
             

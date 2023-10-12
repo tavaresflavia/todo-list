@@ -9,6 +9,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Avenir";
+
+    @media screen and (min-width: 43.75rem){
+        max-width: 43.75rem;
+        margin:auto;
+        
+    }
+
 }
 
 

@@ -1,5 +1,4 @@
 import "./ItemList.scss";
-import { useState } from "react";
 import Item from "../Item/Item";
 
 const ItemList = ({listTitle,tasks}) => {

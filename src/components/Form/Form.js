@@ -38,17 +38,10 @@ const Form = () => {
 
   const handleSubmission = () => {
     axios.post("http://localhost:5050" + "/item", {
-<<<<<<< HEAD
       title: title,
       priority: priorityArr[priority - 1],
       dueDate: dueDate,
       isFun: isFun
-=======
-    title: title,
-    priority: priorityArr[priority-1],
-    dueDate:dueDate,
-    isFun: isFun
->>>>>>> bc1f9e91883b167755499172b647bc4f516091ef
     }
 
     )
